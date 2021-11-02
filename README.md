@@ -1,0 +1,1 @@
+# NoFrameworkNoLibrary_hardCodedApi
