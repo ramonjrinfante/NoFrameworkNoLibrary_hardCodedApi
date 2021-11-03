@@ -21,7 +21,7 @@
 	$(document).ready(()=>{
 		$(document).on("click","#get_request",() =>{
 			console.log("get_request")
-			axios.get('http://localhost/php_api_call_noframework_nolibrary/phprequests/get_request.php').then(response => {
+			axios.get('http://localhost/NoFrameworkNoLibrary_hardCodedApi/phprequests/get_request.php').then(response => {
 				console.log(response.data)
 				$('.message').text(JSON.stringify(response.data))
         	});
@@ -33,7 +33,7 @@
 				lastname:"Infante",
 				status:"This data is from client side and pass it to server(PHP HARD CODED) and return the data from server to clientside",
 			}
-			axios.post('http://localhost/php_api_call_noframework_nolibrary/phprequests/post_request.php',data).then(response => {
+			axios.post('http://localhost/NoFrameworkNoLibrary_hardCodedApi/phprequests/post_request.php',data).then(response => {
 				console.log(response.data)
 				$('.message').text(JSON.stringify(response.data))
         	});
@@ -44,33 +44,33 @@
 				firstname:"Ram",
 				lastname:"Infante",
 			}
-			axios.post('http://localhost/php_api_call_noframework_nolibrary/phprequests/insert_query_request.php',data).then(response => {
+			axios.post('http://localhost/NoFrameworkNoLibrary_hardCodedApi/phprequests/insert_query_request.php',data).then(response => {
 				console.log(response.data)
 
         	});
 		});
 		$(document).on("click","#update_data",() =>{
 			let data = {
-				id:12,
+				id:15,
 				firstname:Math.random().toString(36).substring(7) + Math.random().toString(36).substring(7) + Math.random().toString(36).substring(7) + Math.random().toString(36).substring(7),
 				lastname:Math.random().toString(36).substring(7) + Math.random().toString(36).substring(7) + Math.random().toString(36).substring(7) + Math.random().toString(36).substring(7),
 			}
-			axios.post('http://localhost/php_api_call_noframework_nolibrary/phprequests/update_query_request.php',data).then(response => {
+			axios.post('http://localhost/NoFrameworkNoLibrary_hardCodedApi/phprequests/update_query_request.php',data).then(response => {
 				console.log(response.data)
 
         	});
 		});
 		$(document).on("click","#select_data",() =>{
-			axios.get('http://localhost/php_api_call_noframework_nolibrary/phprequests/select_query_request.php').then(response => {
+			axios.get('http://localhost/NoFrameworkNoLibrary_hardCodedApi/phprequests/select_query_request.php').then(response => {
 				console.log(response.data)
 
         	});
 		});
 		$(document).on("click","#delete_data",() =>{
 			let data = {
-				id:12,
+				id:15,
 			}
-			axios.post('http://localhost/php_api_call_noframework_nolibrary/phprequests/delete_query_request.php',data).then(response => {
+			axios.post('http://localhost/NoFrameworkNoLibrary_hardCodedApi/phprequests/delete_query_request.php',data).then(response => {
 				console.log(response.data)
         	});
 		});
